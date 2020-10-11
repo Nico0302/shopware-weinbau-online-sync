@@ -1,0 +1,31 @@
+{
+    "name": "nico0302/weinbau-online-sync",
+    "description": "Sync orders and products with Weinbau Online",
+    "version": "v1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Gres"
+        }
+    ],
+    "require": {
+        "shopware/core": "*"
+    },
+    "extra": {
+        "shopware-plugin-class": "WeinbauOnlineSync\\WeinbauOnlineSync",
+        "label": {
+            "de-DE": "Weinbau Online Sync",
+            "en-GB": "Weinbau Online Sync"
+        },
+        "description": {
+            "de-DE": "Synchronisierung von Bestellungen und Produkten mit Weinbau Online",
+            "en-GB": "Sync orders and products with Weinbau Online"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "WeinbauOnlineSync\\": "src/"
+        }
+    }
+}

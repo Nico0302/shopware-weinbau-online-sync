@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Login</title>
+        <title lang="de-DE">Anmeldung</title>
+
+        <input-field>
+            <name>email</name>
+            <copyable>true</copyable>
+            <label>E-Mail</label>
+            <label lang="de-DE">E-Mail</label>
+            <placeholder>you@example.com</placeholder>
+            <placeholder lang="de-DE">sie@beispiel.de</placeholder>
+            <helpText>Your Weinbau Online login e-mail adress</helpText>
+            <helpText lang="de-DE">Ihre E-Mail Adresse zur Anmeldung bei Weinbau Online</helpText>
+        </input-field>
+
+        <input-field type="password">
+            <name>password</name>
+            <label>Password</label>
+            <label lang="de-DE">Passwort</label>
+            <helpText>Your Weinbau Online password</helpText>
+            <helpText lang="de-DE">Ihr Weinbau Online Passwort</helpText>
+        </input-field>
+
+        <input-field type="int">
+            <name>userID</name>
+            <copyable>true</copyable>
+            <label>Customer Number</label>
+            <label lang="de-DE">Kundennummer</label>
+            <placeholder>1234</placeholder>
+            <placeholder lang="de-DE">1234</placeholder>
+            <helpText>Your Weinbau Online customer number without the 'w'</helpText>
+            <helpText lang="de-DE">Ihre Weinbau Online Kundennummber ohne das 'w'</helpText>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Billing Methods</title>
+        <title lang="de-DE">Zahlungsarten</title>
+
+        <component name="sw-entity-multi-id-select">
+            <name>methodInvoice</name>
+            <entity>payment_method</entity>
+            <label>Invoice</label>
+            <label lang="de-DE">Rechnung</label>
+            <helpText>Payment methods which will be disblayed as invoice in Weinbau Online</helpText>
+            <helpText lang="de-DE">Zuahlungsarten die in Weinbau Online als Rechnung zugerodnet werden</helpText>
+        </component>
+        <component name="sw-entity-multi-id-select">
+            <name>methodAdvance</name>
+            <entity>payment_method</entity>
+            <label>Pay in advance</label>
+            <label lang="de-DE">Vorkasse</label>
+            <helpText>Payment methods which will be disblayed as payment in advance in Weinbau Online</helpText>
+            <helpText lang="de-DE">Zuahlungsarten die in Weinbau Online als Vorkasse zugerodnet werden</helpText>
+        </component>
+        <component name="sw-entity-multi-id-select">
+            <name>methodDebit</name>
+            <entity>payment_method</entity>
+            <label>Direct Debit</label>
+            <label lang="de-DE">Bankeinzug</label>
+            <helpText>Payment methods which will be disblayed as direct debit in Weinbau Online</helpText>
+            <helpText lang="de-DE">Zuahlungsarten die in Weinbau Online als Bankeinzug zugerodnet werden</helpText>
+        </component>
+        <component name="sw-entity-multi-id-select">
+            <name>methodCOD</name>
+            <entity>payment_method</entity>
+            <label>Cash on delivery</label>
+            <label lang="de-DE">Nachname</label>
+            <helpText>Payment methods which will be disblayed as cash on delivery in Weinbau Online</helpText>
+            <helpText lang="de-DE">Zuahlungsarten die in Weinbau Online als Nachname zugerodnet werden</helpText>
+        </component>
+        <component name="sw-entity-multi-id-select">
+            <name>methodOnSite</name>
+            <entity>payment_method</entity>
+            <label>Cash on site</label>
+            <label lang="de-DE">Bar/Vorort</label>
+            <helpText>Payment methods which will be disblayed as cash on site in Weinbau Online</helpText>
+            <helpText lang="de-DE">Zuahlungsarten die in Weinbau Online als Bar/Vorort zugerodnet werden</helpText>
+        </component>
+        <component name="sw-entity-multi-id-select">
+            <name>methodOnline</name>
+            <entity>payment_method</entity>
+            <label>Online Payments</label>
+            <label lang="de-DE">Online-Bezahldienste</label>
+            <helpText>Online payments like PayPal will be displayed as as pay in advance in Weinbau Online</helpText>
+            <helpText lang="de-DE">Online-Bezahldienste wie PayPal werden in Weinbau Online als Vorkasse angezeigt</helpText>
+        </component>
+    </card>
+</config>

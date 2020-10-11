@@ -42,6 +42,8 @@ class ApiService
         $comment = $order->getCustomerComment();
         $transaction = $order->getTransactions()->first();
         $paymentMethod = $this->getPaymentMethod($transaction->getPaymentMethodId());
+
+        //TODO: implement rest call
     }
 
     private function callApi(string $action, $params)

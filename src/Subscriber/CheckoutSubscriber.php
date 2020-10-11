@@ -36,6 +36,7 @@ class CheckoutSubscriber implements EventSubscriberInterface
 
     public function onOrderPlaced(CheckoutOrderPlacedEvent $event)
     {
-        $this->$apiService->newOrder($event->getOrder());
+        $this->apiService->newOrder($event->getOrder());
+        //TODO: implement e-mail notification fallback
     }
 }

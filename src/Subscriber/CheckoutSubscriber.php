@@ -6,16 +6,23 @@ use Shopware\Core\Checkout\Cart\Event\CheckoutOrderPlacedEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Shopware\Core\Checkout\Cart\CartEvents;
 use Shopware\Core\System\SystemConfig\SystemConfigService;
+use WeinbauOnlineSync\Service\ApiService;
 
 class CheckoutSubscriber implements EventSubscriberInterface
 {
+    /**
+     * @var ApiService
+     */
+    private $apiService;
+
     /**
      * @var SystemConfigService
      */
     private $systemConfigService;
 
-    public function __construct(SystemConfigService $systemConfigService)
+    public function __construct(ApiService $apiService, SystemConfigService $systemConfigService)
     {
+        $this->apiService = $apiService;
         $this->systemConfigService = $systemConfigService;
     }
 
@@ -29,12 +36,6 @@ class CheckoutSubscriber implements EventSubscriberInterface
 
     public function onOrderPlaced(CheckoutOrderPlacedEvent $event)
     {
-        //$exampleConfig = $this->systemConfigService->get('ReadingPluginConfig.config.example'); 
-
-        $shipping = $event->getShippingTotal();
-        $comment = $event->getCustomerComment();
-        $transaction = $event->getTransactions()->first();
-        // Do something
-        // E.g. work with the loaded entities: $event->getEntities()
+        $this->$apiService->newOrder($event->getOrder());
     }
 }

@@ -7,7 +7,7 @@ use Shopware\Core\Checkout\Order\OrderEntity;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
 
-class WeinbauOnlineService
+class ApiService
 {
     private const API_URL = 'https://nephele-s5.de/xml/v14.0/wbo-API.php';
 
@@ -52,7 +52,7 @@ class WeinbauOnlineService
             'apiCODE' => $this->getConfig('password'),
             'apiShopID' => 1,
             'apiACTION' => $action
-        ]
+        ];
         $response = $this->restClient->request(
             'POST',
             $this->API_URL.http_build_query(array_merge($defaultParams, $params))

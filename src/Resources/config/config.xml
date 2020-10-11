@@ -33,7 +33,7 @@
             <placeholder>1234</placeholder>
             <placeholder lang="de-DE">1234</placeholder>
             <helpText>Your Weinbau Online customer number without the 'w'</helpText>
-            <helpText lang="de-DE">Ihre Weinbau Online Kundennummber ohne das 'w'</helpText>
+            <helpText lang="de-DE">Ihre Weinbau Online Kundennummer ohne das 'w'</helpText>
         </input-field>
     </card>
 
@@ -47,7 +47,7 @@
             <label>Invoice</label>
             <label lang="de-DE">Rechnung</label>
             <helpText>Payment methods which will be disblayed as invoice in Weinbau Online</helpText>
-            <helpText lang="de-DE">Zuahlungsarten die in Weinbau Online als Rechnung zugerodnet werden</helpText>
+            <helpText lang="de-DE">Zahlungsarten die in Weinbau Online als Rechnung zugerodnet werden</helpText>
         </component>
         <component name="sw-entity-multi-id-select">
             <name>methodAdvance</name>
@@ -55,7 +55,7 @@
             <label>Pay in advance</label>
             <label lang="de-DE">Vorkasse</label>
             <helpText>Payment methods which will be disblayed as payment in advance in Weinbau Online</helpText>
-            <helpText lang="de-DE">Zuahlungsarten die in Weinbau Online als Vorkasse zugerodnet werden</helpText>
+            <helpText lang="de-DE">Zahlungsarten die in Weinbau Online als Vorkasse zugerodnet werden</helpText>
         </component>
         <component name="sw-entity-multi-id-select">
             <name>methodDebit</name>
@@ -63,7 +63,7 @@
             <label>Direct Debit</label>
             <label lang="de-DE">Bankeinzug</label>
             <helpText>Payment methods which will be disblayed as direct debit in Weinbau Online</helpText>
-            <helpText lang="de-DE">Zuahlungsarten die in Weinbau Online als Bankeinzug zugerodnet werden</helpText>
+            <helpText lang="de-DE">Zahlungsarten die in Weinbau Online als Bankeinzug zugerodnet werden</helpText>
         </component>
         <component name="sw-entity-multi-id-select">
             <name>methodCOD</name>
@@ -71,7 +71,7 @@
             <label>Cash on delivery</label>
             <label lang="de-DE">Nachname</label>
             <helpText>Payment methods which will be disblayed as cash on delivery in Weinbau Online</helpText>
-            <helpText lang="de-DE">Zuahlungsarten die in Weinbau Online als Nachname zugerodnet werden</helpText>
+            <helpText lang="de-DE">Zahlungsarten die in Weinbau Online als Nachname zugerodnet werden</helpText>
         </component>
         <component name="sw-entity-multi-id-select">
             <name>methodOnSite</name>
@@ -79,7 +79,7 @@
             <label>Cash on site</label>
             <label lang="de-DE">Bar/Vorort</label>
             <helpText>Payment methods which will be disblayed as cash on site in Weinbau Online</helpText>
-            <helpText lang="de-DE">Zuahlungsarten die in Weinbau Online als Bar/Vorort zugerodnet werden</helpText>
+            <helpText lang="de-DE">Zahlungsarten die in Weinbau Online als Bar/Vorort zugerodnet werden</helpText>
         </component>
         <component name="sw-entity-multi-id-select">
             <name>methodOnline</name>

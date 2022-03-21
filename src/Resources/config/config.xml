@@ -90,4 +90,34 @@
             <helpText lang="de-DE">Online-Bezahldienste wie PayPal werden in Weinbau Online als Vorkasse angezeigt</helpText>
         </component>
     </card>
+
+    <card>
+        <title>Salutations</title>
+        <title lang="de-DE">Anreden</title>
+
+        <component name="sw-entity-multi-id-select">
+            <name>salutationMs</name>
+            <entity>salutation</entity>
+            <label>Ms.</label>
+            <label lang="de-DE">Frau</label>
+            <helpText>Salutation which will be mapped to Weinbau Online's "Frau" salutation</helpText>
+            <helpText lang="de-DE">Anrede, welche Weinbau Online's "Frau"-Anrede zugeordnet wird</helpText>
+        </component>
+        <component name="sw-entity-multi-id-select">
+            <name>salutationMr</name>
+            <entity>salutation</entity>
+            <label>Mr.</label>
+            <label lang="de-DE">Herr</label>
+            <helpText>Salutation which will be mapped to Weinbau Online's "Herr" salutation</helpText>
+            <helpText lang="de-DE">Anrede, welche Weinbau Online's "Herr"-Anrede zugeordnet wird</helpText>
+        </component>
+        <component name="sw-entity-multi-id-select">
+            <name>salutationCompany</name>
+            <entity>salutation</entity>
+            <label>Company</label>
+            <label lang="de-DE">Firma</label>
+            <helpText>Salutation which will be mapped to Weinbau Online's "Firma" salutation</helpText>
+            <helpText lang="de-DE">Anrede, welche Weinbau Online's "Firma"-Anrede zugeordnet wird</helpText>
+        </component>
+    </card>
 </config>

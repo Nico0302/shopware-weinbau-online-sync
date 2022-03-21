@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "shopware/core": "*"
+        "shopware/core": "*",
+        "viison/address-splitter": "^0.3.4"
     },
     "extra": {
         "shopware-plugin-class": "WeinbauOnlineSync\\WeinbauOnlineSync",

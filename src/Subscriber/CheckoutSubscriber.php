@@ -7,6 +7,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Shopware\Core\Checkout\Cart\CartEvents;
 use Shopware\Core\System\SystemConfig\SystemConfigService;
 use WeinbauOnlineSync\Service\ApiService;
+use Psr\Log\LoggerInterface;
 
 class CheckoutSubscriber implements EventSubscriberInterface
 {
@@ -20,10 +21,20 @@ class CheckoutSubscriber implements EventSubscriberInterface
      */
     private $systemConfigService;
 
-    public function __construct(ApiService $apiService, SystemConfigService $systemConfigService)
-    {
+    /**
+     * @var LoggerInterface
+     */
+    private $logger;
+
+    public function __construct(
+        ApiService $apiService,
+        SystemConfigService $systemConfigService,
+        LoggerInterface $logger
+    ) {
         $this->apiService = $apiService;
         $this->systemConfigService = $systemConfigService;
+        $this->logger = $logger;
+        
     }
 
     public static function getSubscribedEvents(): array
@@ -36,7 +47,14 @@ class CheckoutSubscriber implements EventSubscriberInterface
 
     public function onOrderPlaced(CheckoutOrderPlacedEvent $event)
     {
+        $this->logger->error(
+            \sprintf(
+                'event failed',
+                static::class,
+                __METHOD__,
+                static::class
+            )
+        );
         $this->apiService->newOrder($event->getOrder());
-        //TODO: implement e-mail notification fallback
     }
 }
